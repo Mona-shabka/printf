@@ -72,4 +72,25 @@ void init_params(params_t *params, va_list list);
 
 int _printf(const char *format, ...);
 
+char *convert(long int number, int base, int flag, params_t *params);
+int print_unsigned(va_list list, params_t *params);
+int print_address(va_list list, params_t *params);
+
+int _isdigit(int ch);
+int _strlen(char *string);
+int print_number(char *string, params_t *params);
+int print_number_right_shift(char *string, params_t *params);
+int print_number_left_shift(char *string, params_t *params);
+
+int print_hex(va_list list, params_t *params);
+int print_octal(va_list list, params_t *params);
+int print_binary(va_list list, params_t *params);
+int print_HEX(va_list list, params_t *params);
+
+int print_S(va_list list, params_t *params);
+int print_char(va_list list, params_t *params);
+int print_int(va_list list, params_t *params);
+int print_string(va_list list, params_t *params);
+int print_percent(va_list list, params_t *params);
+
 #endif
