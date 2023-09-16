@@ -27,12 +27,12 @@ return (sum);
 /**
 * print_from_to - function that prints letters address.
 * @begin: start address.
-* @stop: end address.
+* @end: end address.
 * @except: excepting address.
 * Return: byte number.
 */
 
-int print_from_to(char *begin, char *stop, char *except)
+int print_from_to(char *begin, char *end, char *except)
 {
 int sum = 0;
 

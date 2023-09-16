@@ -71,17 +71,17 @@ switch (*string)
 case '+':
 x = params->plus_flag = 1;
 break;
-case '-':
-x = params->minus_flag = 1;
-break;
 case ' ':
 x = params->space_flag = 1;
 break;
-case '0':
-x = params->zero_flag = 1;
-break;
 case '#':
 x = params->hashtag_flag = 1;
+break;
+case '-':
+x = params->minus_flag = 1;
+break;
+case '0':
+x = params->zero_flag = 1;
 break;
 }
 return (x);
@@ -100,11 +100,11 @@ int x = 0;
 
 switch (*string)
 {
-case 'l':
-x = params->l_modifier = 1;
-break;
 case 'h':
 x = params->h_modifier = 1;
+break;
+case 'l':
+x = params->l_modifier = 1;
 break;
 }
 return (x);

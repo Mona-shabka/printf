@@ -66,7 +66,7 @@ int get_modifier(char *string, params_t *params);
 char *get_width(char *string, params_t *params, va_list list);
 
 int print_rev(va_list list, params_t *params);
-int print_from_to(char *begin, char *stop, char *except);
+int print_from_to(char *begin, char *end, char *except);
 int print_rot13(va_list list, params_t *params);
 
 char *get_precision(char *string, params_t *params, va_list list);
@@ -97,4 +97,7 @@ int print_char(va_list list, params_t *params);
 int print_int(va_list list, params_t *params);
 int print_string(va_list list, params_t *params);
 int print_percent(va_list list, params_t *params);
+
+
+
 #endif
