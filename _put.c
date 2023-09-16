@@ -28,7 +28,7 @@ static int i;
 
 if (character == BUF_FLUSH || i >= OUTPUT_BUF_SIZE)
 {
-write(1, buf, i);
+write(1, &buf, i);
 i = 0;
 }
 if (character != BUF_FLUSH)
