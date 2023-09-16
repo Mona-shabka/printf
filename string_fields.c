@@ -11,6 +11,7 @@
 char *get_precision(char *string, params_t *params, va_list list)
 {
 int y = 0;
+
 if (*string != '.')
 return (string);
 string++;
