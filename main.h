@@ -28,13 +28,16 @@
 typedef struct parameters
 {
 unsigned int unsign		: 1;
+
 unsigned int plus_flag		: 1;
-unsigned int minus_flag		: 1;
 unsigned int space_flag		: 1;
-unsigned int zero_flag		: 1;
 unsigned int hashtag_flag	: 1;
+unsigned int zero_flag		: 1;
+unsigned int minus_flag		: 1;
+
 unsigned int width;
 unsigned int precision;
+
 unsigned int h_modifier		: 1;
 unsigned int l_modifier		: 1;
 } params_t;
@@ -76,6 +79,7 @@ char *convert(long int number, int base, int flag, params_t *params);
 int print_unsigned(va_list list, params_t *params);
 int print_address(va_list list, params_t *params);
 
+
 int _isdigit(int ch);
 int _strlen(char *string);
 int print_number(char *string, params_t *params);
@@ -87,10 +91,10 @@ int print_octal(va_list list, params_t *params);
 int print_binary(va_list list, params_t *params);
 int print_HEX(va_list list, params_t *params);
 
+
 int print_S(va_list list, params_t *params);
 int print_char(va_list list, params_t *params);
 int print_int(va_list list, params_t *params);
 int print_string(va_list list, params_t *params);
 int print_percent(va_list list, params_t *params);
-
 #endif

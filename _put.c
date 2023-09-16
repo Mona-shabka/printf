@@ -31,7 +31,7 @@ if (character == BUF_FLUSH || i >= OUTPUT_BUF_SIZE)
 write(1, buffer, i);
 i = 0;
 }
-if (c != BUF_FLUSH)
+if (character != BUF_FLUSH)
 buffer[i++] = character;
 return (1);
 }
