@@ -9,7 +9,7 @@
 
 int print_rev(va_list list, params_t *params)
 {
-int sum = 0, length;
+int length, sum = 0;
 char *string = va_arg(list, char *);
 (void)params;
 
