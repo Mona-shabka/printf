@@ -53,7 +53,7 @@ m = (unsigned short int)va_arg(list, unsigned int);
 else
 m = (unsigned int)va_arg(list, unsigned int);
 params->unsign = 1;
-return (print_number(convert(1, 10, CONVERT_UNSIGNED, params), params));
+return (print_number(convert(m, 10, CONVERT_UNSIGNED, params), params));
 }
 
 /**
