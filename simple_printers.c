@@ -59,7 +59,7 @@ int counter = 0;
 char *m = va_arg(list, char *);
 (void)params;
 char array[] =
-"NOPQRSTUVWXYZABCDEFGHIJKLM	nopqrstuvwxyzabcdefghijklm";
+	"NOPQRSTUVWXYZABCDEFGHIJKLM	nopqrstuvwxyzabcdefghijklm";
 
 point = 0;
 x = 0;
