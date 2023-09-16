@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
-* get_specifiers - function that find the function format.
+* get_specifier - function that find the function format.
 * @string: input string.
 * Return: bytes number.
 */
 
-int (*get_specifiers(char *string))(va_list list, params_t *params)
+int (*get_specifier(char *string))(va_list list, params_t *params)
 {
 specifier_t specifiers[] = {
 {"c", print_char},
@@ -18,9 +18,9 @@ specifier_t specifiers[] = {
 {"o", print_octal},
 {"u", print_unsigned},
 {"x", print_hex},
-{"X", print_Hex},
+{"X", print_HEX},
 {"p", print_address},
-{"S", print_s},
+{"S", print_S},
 {"r", print_rev},
 {"R", print_rot13},
 {NULL, NULL}

@@ -59,7 +59,7 @@ int (*func)(va_list, params_t *);
 int _puts(char *string);
 int _putchar(int character);
 
-int (*get_specifiers(char *string))(va_list list, params_t *params);
+int (*get_specifier(char *string))(va_list list, params_t *params);
 int get_print_func(char *string, va_list list, params_t *params);
 int get_flag(char *string, params_t *params);
 int get_modifier(char *string, params_t *params);
