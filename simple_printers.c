@@ -54,12 +54,12 @@ return (sum);
 
 int print_rot13(va_list list, params_t *params)
 {
-int point, x;
+int x, point;
 int counter = 0;
-char *m = va_arg(list, char *);
-(void)params;
 char array[] =
 	"NOPQRSTUVWXYZABCDEFGHIJKLM	nopqrstuvwxyzabcdefghijklm";
+char *m = va_arg(list, char *);
+(void)params;
 
 point = 0;
 x = 0;
