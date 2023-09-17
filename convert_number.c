@@ -94,8 +94,8 @@ return (ch += print_number(string, params));
 int print_binary(va_list list, params_t *params)
 {
 int ch = 0;
-char *string = convert(m, 2, CONVERT_UNSIGNED, params);
 unsigned int m = va_arg(list, unsigned int);
+char *string = convert(m, 2, CONVERT_UNSIGNED, params);
 
 if (params->hashtag_flag && m)
 *--string = '0';

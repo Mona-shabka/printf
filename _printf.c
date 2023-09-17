@@ -1,19 +1,16 @@
-#inclde "main.h"
+#include "main.h"
 
 /**
 * _printf - a function that produces output according to a format.
 * @format: format is a character string.
 * Return: the number of characters printed (excluding the null byte).
 */
-
 int _printf(const char *format, ...)
 {
 va_list list;
-char *paragraph;
-char *begin;
+char *paragraph, *begin;
 int sum = 0;
 params_t params = PARAMS_INIT;
-
 va_start(list, format);
 
 if (!format || (format[0] == '%' && !format[1]))

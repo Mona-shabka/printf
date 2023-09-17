@@ -9,7 +9,7 @@
 
 int print_rev(va_list list, params_t *params)
 {
-int sum = 0, length;
+int length, sum = 0;
 char *string = va_arg(list, char *);
 (void)params;
 
@@ -27,12 +27,12 @@ return (sum);
 /**
 * print_from_to - function that prints letters address.
 * @begin: start address.
-* @stop: end address.
+* @end: end address.
 * @except: excepting address.
 * Return: byte number.
 */
 
-int print_from_to(char *begin, char *stop, char *except)
+int print_from_to(char *begin, char *end, char *except)
 {
 int sum = 0;
 
@@ -54,12 +54,12 @@ return (sum);
 
 int print_rot13(va_list list, params_t *params)
 {
-int point, x;
+int x, point;
 int counter = 0;
+char array[] =
+	"NOPQRSTUVWXYZABCDEFGHIJKLM	nopqrstuvwxyzabcdefghijklm";
 char *m = va_arg(list, char *);
 (void)params;
-char array[] =
-"NOPQRSTUVWXYZABCDEFGHIJKLM	nopqrstuvwxyzabcdefghijklm";
 
 point = 0;
 x = 0;

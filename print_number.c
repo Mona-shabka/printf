@@ -117,6 +117,7 @@ if (negative && length < params->width && pad == '0' && !params->minus_flag)
 string++;
 else
 negative = 0;
+
 if (params->plus_flag && !negative1 && !params->unsign)
 x += _putchar('+'), length++;
 else if (params->space_flag && !negative1 && !params->unsign)

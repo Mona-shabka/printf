@@ -23,15 +23,15 @@ return (string - x);
 
 int _putchar(int character)
 {
-static char buffer[OUTPUT_BUF_SIZE];
+static char buf[OUTPUT_BUF_SIZE];
 static int i;
 
 if (character == BUF_FLUSH || i >= OUTPUT_BUF_SIZE)
 {
-write(1, buffer, i);
+write(1, buf, i);
 i = 0;
 }
-if (c != BUF_FLUSH)
-buffer[i++] = character;
+if (character != BUF_FLUSH)
+buf[i++] = character;
 return (1);
 }
