@@ -1,10 +1,12 @@
-#ifndef _PRINTF_H
-#define _PRINTF_H
+#ifndef _PRINTF_H_
+#define _PRINTF_H_
+
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
 #include <unistd.h>
+
 #define OUTPUT_BUF_SIZE 1024
 #define BUF_FLUSH -1
 #define NULL_STRING "(null)"
@@ -13,9 +15,9 @@
 #define CONVERT_UNSIGNED    2
 
 /**
-* struct parameters - struction of parameters.
-* @unsign: unsigned parameter if found.
-* @plus_flag: plus flag if found
+* struct parameters - This is the tructure of parameters.
+* @unsign: the unsigned parameter if found.
+* @plus_flag: the plus flag if found
 * @minus_flag: if found.
 * @space_flag: if found.
 * @zero_flag: if found.
@@ -25,6 +27,7 @@
 * @h_modifier: if found.
 * @l_modifier: if found.
 */
+
 typedef struct parameters
 {
 unsigned int unsign		: 1;
@@ -41,7 +44,8 @@ unsigned int l_modifier		: 1;
 
 
 /**
-* struct specifier - structure.
+* struct specifier - This is the structure specifier
+*
 * @specifier: format.
 * @func: input function.
 */

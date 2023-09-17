@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
-* get_specifiers - function that find the function format.
+* get_specifiers - This function finds the function format
 * @string: input string.
-* Return: bytes number.
+* Return: x
+*
 */
 
 int (*get_specifiers(char *string))(va_list list, params_t *params)
@@ -25,6 +26,7 @@ specifier_t specifiers[] = {
 {"R", print_rot13},
 {NULL, NULL}
 };
+
 int x = 0;
 
 while (specifiers[x].specifier)
@@ -35,15 +37,18 @@ return (specifiers[x].func);
 }
 x++;
 }
+
 return (NULL);
 }
 
 /**
-* get_print_func - function that get the function format.
-* @string: input string.
-* @list: pointer of arguments.
-* @params: struction of parameters.
-* Return: integer of bytes.
+* get_print_func - This function gets the function format
+* @string: input string
+* @list: pointer of arguments
+* @params: the parameters
+*
+* Return: list params or 0
+*
 */
 
 int get_print_func(char *string, va_list list, params_t *params)
@@ -52,18 +57,21 @@ int (*func)(va_list, params_t *) = get_specifier(string);
 
 if (func)
 return (func(list, params));
+
 return (0);
 }
 
 /**
-* get_flag - function that get function flag.
+* get_flag - This function gets the function flag
 * @string: input string.
 * @params: struction of parameters.
-* Return: flag of function.
+*
+* Return: the flag
 */
 
 int get_flag(char *string, params_t *params)
 {
+
 int x = 0;
 
 switch (*string)
@@ -84,14 +92,17 @@ case '#':
 x = params->hashtag_flag = 1;
 break;
 }
+
 return (x);
 }
 
 /**
-* get_modifier - function that get function modifier.
+* get_modifier - This function gets function modifier
 * @string: input string.
-* @params: struction of parameters.
-* Return: modifier of function.
+* @params: struction of parameters
+*
+* Return: x
+*
 */
 
 int get_modifier(char *string, params_t *params)
@@ -107,19 +118,23 @@ case 'h':
 x = params->h_modifier = 1;
 break;
 }
+
 return (x);
 }
 
 /**
-* get_width - function that get function width.
+* get_width - This function gets function width.
 * @string: input string.
 * @params: struction of parameters.
 * @list: pointerr of arguments.
-* Return: width of function.
+*
+* Return: string
+*
 */
 
 char *get_width(char *string, params_t *params, va_list list)
 {
+
 int y = 0;
 
 if (*string == '*')
@@ -133,5 +148,6 @@ while (_isdigit(*string))
 y = y * 10 + (*string++ - '0');
 }
 params->width = y;
+
 return (string);
 }
