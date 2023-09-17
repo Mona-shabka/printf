@@ -19,7 +19,7 @@ for (length = 0; *string; string++)
 length++;
 string--;
 for (; length > 0; length--, string--)
-sum += _putchar(*string);
+sum += mo_putchar(*string);
 }
 return (sum);
 }
@@ -39,7 +39,7 @@ int sum = 0;
 while (begin <= end)
 {
 if (begin != except)
-sum += _putchar(*begin);
+sum += mo_putchar(*begin);
 begin++;
 }
 return (sum);
@@ -68,10 +68,10 @@ while (m[x])
 if ((m[x] >= 'A' && m[x] <= 'Z') || (m[x] >= 'a' && m[x] <= 'z'))
 {
 point = m[x] - 65;
-counter += _putchar(array[point]);
+counter += mo_putchar(array[point]);
 }
 else
-counter += _putchar(m[x]);
+counter += mo_putchar(m[x]);
 x++;
 }
 return (counter);

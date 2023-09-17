@@ -3,9 +3,12 @@
 
 #include <stdarg.h>
 #include <stdio.h>
+#include <unistd.h>
 #include <stdlib.h>
 #include <limits.h>
 #include <unistd.h>
+
+#define UNUSED(x) (void)(x)
 #define OUTPUT_BUF_SIZE 1024
 #define BUF_FLUSH -1
 #define NULL_STRING "(null)"
@@ -58,16 +61,16 @@ int (*func)(va_list, params_t *);
 } specifier_t;
 
 
-int _puts(char *string);
-int _putchar(int character);
+int mo_puts(char *string);
+int mo_putchar(int character);
 
 int (*get_specifier(char *string))(va_list list, params_t *params);
 int get_print_func(char *string, va_list list, params_t *params);
 int get_flag(char *string, params_t *params);
 int get_modifier(char *string, params_t *params);
 char *get_width(char *string, params_t *params, va_list list);
-
 int print_rev(va_list list, params_t *params);
+
 int print_from_to(char *begin, char *end, char *except);
 int print_rot13(va_list list, params_t *params);
 

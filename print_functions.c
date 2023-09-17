@@ -14,21 +14,21 @@ char *hexa;
 char *string = va_arg(list, char *);
 
 if ((int)(!string))
-return (_puts(NULL_STRING));
+return (mo_puts(NULL_STRING));
 for (; *string; string++)
 {
 if ((*string > 0 && *string < 32) || *string >= 127)
 {
-sum += _putchar('\\');
-sum += _putchar('x');
+sum += mo_putchar('\\');
+sum += mo_putchar('x');
 hexa = convert(*string, 16, 0, params);
 if (!hexa[1])
-sum += _putchar('0');
-sum += _puts(hexa);
+sum += mo_putchar('0');
+sum += mo_puts(hexa);
 }
 else
 {
-sum += _putchar(*string);
+sum += mo_putchar(*string);
 }
 }
 return (sum);
@@ -47,11 +47,11 @@ unsigned int c = va_arg(list, int), pad1 = 1, sum = 0;
 char pad = ' ';
 
 if (params->minus_flag)
-sum += _putchar(c);
+sum += mo_putchar(c);
 while (pad1++ < params->width)
-sum += _putchar(pad);
+sum += mo_putchar(pad);
 if (!params->minus_flag)
-sum += _putchar(c);
+sum += mo_putchar(c);
 return (sum);
 }
 
@@ -100,19 +100,19 @@ if (params->minus_flag)
 {
 if (params->precision != UINT_MAX)
 for (x = 0; x < pad1; x++)
-sum += _putchar(*string++);
+sum += mo_putchar(*string++);
 else
-sum += _puts(string);
+sum += mo_puts(string);
 }
 while (y++ < params->width)
-sum += _putchar(pad);
+sum += mo_putchar(pad);
 if (!params->minus_flag)
 {
 if (params->precision != UINT_MAX)
 for (x = 0; x < pad1; x++)
-sum += _putchar(*string++);
+sum += mo_putchar(*string++);
 else
-sum += _puts(string);
+sum += mo_puts(string);
 }
 return (sum);
 }
@@ -128,5 +128,5 @@ int print_percent(va_list list, params_t *params)
 {
 (void)params;
 (void)list;
-return (_putchar('%'));
+return (mo_putchar('%'));
 }

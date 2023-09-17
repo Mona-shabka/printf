@@ -1,14 +1,17 @@
 #include "main.h"
 
 /**
-* _printf - a function that produces output according to a format.
-* @format: format is a character string.
-* Return: the number of characters printed (excluding the null byte).
+* _printf - This function produces output according to a format.
+* @format: a format specifier
+*
+* Return: the number of characters
+*
 */
 int _printf(const char *format, ...)
 {
 va_list list;
 char *paragraph, *begin;
+
 int sum = 0;
 params_t params = PARAMS_INIT;
 va_start(list, format);
@@ -22,7 +25,7 @@ for (paragraph = (char *)format; *paragraph; paragraph++)
 init_params(&params, list);
 if (*paragraph != '%')
 {
-sum += _putchar(*paragraph);
+sum += mo_putchar(*paragraph);
 continue;
 }
 begin = paragraph;
@@ -41,7 +44,8 @@ params.l_modifier || params.h_modifier ? paragraph - 1 : 0);
 else
 sum += get_print_func(paragraph, list, &params);
 }
-_putchar(BUF_FLUSH);
+mo_putchar(BUF_FLUSH);
 va_end(list);
+
 return (sum);
 }

@@ -69,7 +69,7 @@ char *string;
 unsigned long int x = va_arg(list, unsigned long int);
 
 if (!x)
-return (_puts("(nil)"));
+return (mo_puts("(nil)"));
 string = convert(x, 16, CONVERT_UNSIGNED | CONVERT_LOWERCASE, params);
 *--string = 'x';
 *--string = '0';

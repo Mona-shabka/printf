@@ -79,22 +79,22 @@ if ((params->plus_flag && !negative1) ||
 (!params->plus_flag && params->space_flag && !negative1))
 length++;
 if (negative && pad == '0')
-x += _putchar('-');
+x += mo_putchar('-');
 if (params->plus_flag && !negative1 && pad == '0' && !params->unsign)
-x +=  _putchar('+');
+x +=  mo_putchar('+');
 else if (!params->plus_flag && params->space_flag && !negative1 &&
 !params->unsign && params->zero_flag)
-x += _putchar(' ');
+x += mo_putchar(' ');
 while (length++ < params->width)
-x += _putchar(pad);
+x += mo_putchar(pad);
 if (negative && pad == ' ')
-x += _putchar('-');
+x += mo_putchar('-');
 if (params->plus_flag && !negative1 && pad == ' ' && !params->unsign)
-x += _putchar('+');
+x += mo_putchar('+');
 else if (!params->plus_flag && params->space_flag && !negative1 &&
 !params->unsign && !params->zero_flag)
-x += _putchar(' ');
-x += _puts(string);
+x += mo_putchar(' ');
+x += mo_puts(string);
 return (x);
 }
 
@@ -119,11 +119,11 @@ else
 negative = 0;
 
 if (params->plus_flag && !negative1 && !params->unsign)
-x += _putchar('+'), length++;
+x += mo_putchar('+'), length++;
 else if (params->space_flag && !negative1 && !params->unsign)
-x += _putchar(' '), length++;
-x += _puts(string);
+x += mo_putchar(' '), length++;
+x += mo_puts(string);
 while (length++ < params->width)
-x += _putchar(pad);
+x += mo_putchar(pad);
 return (x);
 }
