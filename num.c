@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* convert - a function that convert number to string.
+* convert - This function converts a number to string.
 * @number: input number.
 * @base: Base.
 * @flag: flag of argument.
