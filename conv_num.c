@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* print_hex - This function prints hexa number in lowercase.
+* print_hex - This function prints hexadecimal number in lowercase.
 * @list: pointerr of arguments
 * @params: the parameters
 *
