@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* mo_puts - a function that print string with new line.
+* mo_puts - This function prints a string with new line.
 * @string: input string.
 * Return: length of string.
 */
