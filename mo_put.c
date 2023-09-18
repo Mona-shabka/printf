@@ -16,8 +16,8 @@ return (string - x);
 }
 
 /**
-* mo_putchar - a function that write the character to stdout.
-* @character: letter that to be print.
+* mo_putchar - This function writes the character to stdout.
+* @character: the character
 * Return: 1 (success) or -1 (fail).
 */
 
