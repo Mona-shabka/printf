@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* print_S - This function shows specified format
+* print_S - This function shows a specified format
 * @list: pointerr of arguments
 * @params: structure
 *
