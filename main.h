@@ -17,12 +17,12 @@
 #define CONVERT_UNSIGNED    2
 
 /**
-* struct parameters - struction of parameters.
-* @unsign: unsigned parameter if found.
-* @plus_flag: plus flag if found
-* @minus_flag: if found.
+* struct parameters - struct of parameters.
+* @unsign: unsigned parameter
+* @plus_flag: plus flag
+* @minus_flag: minus flag 
 * @space_flag: if found.
-* @zero_flag: if found.
+* @zero_flag: if found
 * @hashtag_flag: if found.
 * @width: width if found.
 * @precision: if found.
