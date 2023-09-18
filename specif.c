@@ -2,7 +2,7 @@
 
 /**
 * get_specifier - This function finds the function format
-* @string: input string
+* @string: the input string
 *
 * Return: x
 */
