@@ -8,7 +8,6 @@
 #include <limits.h>
 #include <unistd.h>
 
-#define UNUSED(x) (void)(x)
 #define OUTPUT_BUF_SIZE 1024
 #define BUF_FLUSH -1
 #define NULL_STRING "(null)"
@@ -20,7 +19,7 @@
 * struct parameters - struct of parameters.
 * @unsign: unsigned parameter
 * @plus_flag: plus flag
-* @minus_flag: minus flag 
+* @minus_flag: minus flag
 * @space_flag: if found.
 * @zero_flag: if found
 * @hashtag_flag: if found.
