@@ -3,7 +3,7 @@
 /**
 * convert - This function converts a number to string.
 * @number: input number.
-* @base: Base.
+* @base: the base
 * @flag: flag of argument.
 * @params:structure of parameters.
 * Return: string.
