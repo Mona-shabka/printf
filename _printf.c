@@ -9,43 +9,43 @@
 */
 int _printf(const char *format, ...)
 {
-va_list list;
-char *paragraph, *begin;
+va_list i;
+char *par, *b;
 
 int sum = 0;
 params_t params = PARAMS_INIT;
-va_start(list, format);
+va_start(i, format);
 
 if (!format || (format[0] == '%' && !format[1]))
 return (-1);
 if (format[0] == '%' && format[1] == ' ' && !format[2])
 return (-1);
-for (paragraph = (char *)format; *paragraph; paragraph++)
+for (par = (char *)format; *par; par++)
 {
-init_params(&params, list);
-if (*paragraph != '%')
+init_params(&params, i);
+if (*par != '%')
 {
-sum += mo_putchar(*paragraph);
+sum += mo_putchar(*par);
 continue;
 }
-begin = paragraph;
-paragraph++;
-while (get_flag(paragraph, &params))
+b = par;
+par++;
+while (get_flag(par, &params))
 {
-paragraph++;
+par++;
 }
-paragraph = get_width(paragraph, &params, list);
-paragraph = get_precision(paragraph, &params, list);
-if (get_modifier(paragraph, &params))
-paragraph++;
-if (!get_specifier(paragraph))
-sum += print_from_to(begin, paragraph,
-params.l_modifier || params.h_modifier ? paragraph - 1 : 0);
+par = get_width(par, &params, i);
+par = get_precision(par, &params, i);
+if (get_modifier(par, &params))
+par++;
+if (!get_specifier(par))
+sum += print_from_to(b, par,
+params.l_modifier || params.h_modifier ? par - 1 : 0);
 else
-sum += get_print_func(paragraph, list, &params);
+sum += get_print_func(par, i, &params);
 }
 mo_putchar(BUF_FLUSH);
-va_end(list);
+va_end(i);
 
 return (sum);
 }

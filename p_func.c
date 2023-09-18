@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
-* print_S - a function that show specified format.
+* print_S - This function shows specified format
 * @list: pointerr of arguments
-* @params: structure.
-* Return: integer.
+* @params: structure
+*
+* Return: sum
 */
 
 int print_S(va_list list, params_t *params)
@@ -35,10 +36,11 @@ return (sum);
 }
 
 /**
-* print_char - a function that print letters.
+* print_char -  This function prints letters
 * @list: pointerr of arguments
-* @params: structure.
-* Return: sum.
+* @params: structure
+*
+* Return: sum
 */
 
 int print_char(va_list list, params_t *params)
@@ -56,10 +58,11 @@ return (sum);
 }
 
 /**
-* print_int - a function that print numbers.
+* print_int - This function print numbers
 * @list: pointerr of arguments
-* @params: structure.
-* Return: number.
+* @params: structure
+*
+* Return: number
 */
 
 int print_int(va_list list, params_t *params)
@@ -76,10 +79,11 @@ return (print_number(convert(m, 10, 0, params), params));
 }
 
 /**
-* print_string - a function that print string.
+* print_string - This function print a string
 * @list: pointerr of arguments
-* @params: structure.
-* Return: sum.
+* @params: structure
+*
+* Return: sum
 */
 
 int print_string(va_list list, params_t *params)
@@ -118,10 +122,11 @@ return (sum);
 }
 
 /**
-* print_percent - a function that print letters.
+* print_percent - This function prints letters
 * @list: pointerr of arguments
-* @params: structure.
-* Return: integer.
+* @params: structure
+*
+* Return: integer
 */
 
 int print_percent(va_list list, params_t *params)

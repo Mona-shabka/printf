@@ -1,16 +1,17 @@
 #include "main.h"
 
 /**
-* print_hex - a function that print hexa number in lowercase.
+* print_hex - This function prints hexa number in lowercase.
 * @list: pointerr of arguments
-* @params: structure.
-* Return: bytes.
+* @params: the parameters
+*
+* Return: bytes
 */
 
 int print_hex(va_list list, params_t *params)
 {
 int ch = 0;
-char *string;
+char *stn;
 unsigned long m;
 
 if (params->l_modifier)
@@ -19,14 +20,14 @@ else if (params->h_modifier)
 m = (unsigned short int)va_arg(list, unsigned int);
 else
 m = (unsigned int)va_arg(list, unsigned int);
-string = convert(m, 16, CONVERT_UNSIGNED | CONVERT_LOWERCASE, params);
+stn = convert(m, 16, CONVERT_UNSIGNED | CONVERT_LOWERCASE, params);
 if (params->hashtag_flag && m)
 {
-*--string = 'x';
-*--string = '0';
+*--stn = 'x';
+*--stn = '0';
 }
 params->unsign = 1;
-return (ch += print_number(string, params));
+return (ch += print_number(stn, params));
 }
 
 /**
@@ -39,7 +40,7 @@ return (ch += print_number(string, params));
 int print_HEX(va_list list, params_t *params)
 {
 int ch = 0;
-char *string;
+char *stn;
 unsigned long m;
 
 if (params->l_modifier)
@@ -48,14 +49,14 @@ else if (params->h_modifier)
 m = (unsigned short int)va_arg(list, unsigned int);
 else
 m = (unsigned int)va_arg(list, unsigned int);
-string = convert(m, 16, CONVERT_UNSIGNED, params);
+stn = convert(m, 16, CONVERT_UNSIGNED, params);
 if (params->hashtag_flag && m)
 {
-*--string = 'X';
-*--string = '0';
+*--stn = 'X';
+*--stn = '0';
 }
 params->unsign = 1;
-return (ch += print_number(string, params));
+return (ch += print_number(stn, params));
 }
 
 /**
@@ -68,7 +69,7 @@ return (ch += print_number(string, params));
 int print_octal(va_list list, params_t *params)
 {
 int ch = 0;
-char *string;
+char *stn;
 unsigned long m;
 
 if (params->l_modifier)
@@ -77,28 +78,30 @@ else if (params->h_modifier)
 m = (unsigned short int)va_arg(list, unsigned int);
 else
 m = (unsigned int)va_arg(list, unsigned int);
-string = convert(m, 8, CONVERT_UNSIGNED, params);
+stn = convert(m, 8, CONVERT_UNSIGNED, params);
 if (params->hashtag_flag && m)
-*--string = '0';
+*--stn = '0';
 params->unsign = 1;
-return (ch += print_number(string, params));
+
+return (ch += print_number(stn, params));
 }
 
 /**
-* print_binary - a function that print binary number.
+* print_binary - This function  prints binary number.
 * @list: pointerr of arguments
-* @params: structure.
-* Return: bytes.
+* @params: structure
+*
+* Return: bytes
 */
 
 int print_binary(va_list list, params_t *params)
 {
 int ch = 0;
 unsigned int m = va_arg(list, unsigned int);
-char *string = convert(m, 2, CONVERT_UNSIGNED, params);
+char *stn = convert(m, 2, CONVERT_UNSIGNED, params);
 
 if (params->hashtag_flag && m)
-*--string = '0';
+*--stn = '0';
 params->unsign = 1;
-return (ch += print_number(string, params));
+return (ch += print_number(stn, params));
 }

@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
-* _isdigit - a function that show if letter is number.
-* @ch: checked letter.
-* Return: 1 (number) and 0 (letter).
+* _isdigit - This function checks if letter is number.
+* @ch: checker
+*
+* Return: 1 if (number) and 0 if (letter)
 */
 
 int _isdigit(int ch)
@@ -12,9 +13,11 @@ return (ch >= '0' && ch <= '9');
 }
 
 /**
-* _strlen - a function that give the length of string.
-* @string: input string.
-* Return: length.
+* _strlen - This function gives the length of string
+* @string: input string
+*
+* Return: length
+*
 */
 
 int _strlen(char *string)
@@ -27,10 +30,11 @@ return (length);
 }
 
 /**
-* print_number - a function that print integers.
-* @string: input string.
+* print_number - This function prints integers
+* @string: input string
 * @params: the structure
-* Return: number.
+* Return: number
+*
 */
 
 int print_number(char *string, params_t *params)
@@ -57,10 +61,11 @@ return (print_number_left_shift(string, params));
 }
 
 /**
-* print_number_right_shift - a function that print integers.
-* @string: input string.
+* print_number_right_shift - This function prints integers
+* @string: input string
 * @params: the structure
-* Return: integers.
+*
+* Return: integers
 */
 
 int print_number_right_shift(char *string, params_t *params)
@@ -99,10 +104,12 @@ return (x);
 }
 
 /**
-* print_number_left_shift - a function that print integers.
-* @string: input string.
+* print_number_left_shift - This function print integers.
+* @string: input string
 * @params: the structure
-* Return: integers.
+*
+* Return: integers
+*
 */
 
 int print_number_left_shift(char *string, params_t *params)

@@ -1,15 +1,17 @@
 #include "main.h"
 
 /**
-* print_rev - function that reverse string.
-* @params: struction of parameters.
-* @list: pointerr of arguments.
-* Return: byte number.
+* print_rev - This function reverses string.
+* @params: parameters
+* @list: pointerr of arguments
+*
+* Return: byte number
 */
 
 int print_rev(va_list list, params_t *params)
 {
-int length, sum = 0;
+int length;
+int sum = 0;
 char *string = va_arg(list, char *);
 (void)params;
 
@@ -25,11 +27,13 @@ return (sum);
 }
 
 /**
-* print_from_to - function that prints letters address.
-* @begin: start address.
-* @end: end address.
-* @except: excepting address.
-* Return: byte number.
+* print_from_to - This function prints letters address
+* @begin: start address
+* @end: end address
+* @except: excepting address
+*
+* Return: summ
+*
 */
 
 int print_from_to(char *begin, char *end, char *except)
@@ -46,16 +50,16 @@ return (sum);
 }
 
 /**
-* print_rot13 - function that prints letters.
-* @list: input string.
-* @params: struction of parameters.
-* Return: byte number.
+* print_rot13 - This function prints letters
+* @list: input string
+* @params: struction of parameters
+*
+* Return: byte number
 */
 
 int print_rot13(va_list list, params_t *params)
 {
-int x, point;
-int counter = 0;
+int x, point, counter = 0;
 char array[] =
 	"NOPQRSTUVWXYZABCDEFGHIJKLM	nopqrstuvwxyzabcdefghijklm";
 char *m = va_arg(list, char *);

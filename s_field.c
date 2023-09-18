@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
-* get_precision - function that find precision from given string.
-* @string: input string.
-* @params: struction of parameters.
-* @list: pointerr of arguments.
-* Return: pointer.
+* get_precision - This function finds precision from given string.
+* @string: input string
+* @params: the parameters
+* @list: pointerr of arguments
+*
+* Return: string
 */
 
 char *get_precision(char *string, params_t *params, va_list list)
@@ -26,5 +27,6 @@ while (_isdigit(*string))
 y = y * 10 + (*string++ - '0');
 }
 params->precision = y;
+
 return (string);
 }
